@@ -6,6 +6,7 @@ Carteira de Ações
 - dê um "git clone https://github.com/Web-2-Carteira-de-Acoes/carteira_digital_de_acoes.git" no terminal
 - abra a pasta que foi criada com o vs code
 - crie sua venv
+- 
 $ apt install python3-pip
 
 $ pip3 install virtualenv
