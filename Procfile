@@ -1,0 +1,1 @@
+web: gunicorn cd_acoes.wsgi --log-file -
