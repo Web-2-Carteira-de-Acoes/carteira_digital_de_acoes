@@ -1,0 +1,63 @@
+{% extends 'layout/layout.html' %}
+{%load static %}
+{% block title %}Carteira Black{% endblock %}
+{% block css %}
+<link href={% static "css/styles_layout.css" %} rel="stylesheet">
+{% endblock %}
+{% block content %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Cateira Black</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Filtro <i
+            class="fas fa-filter fa-sm text-white-50"></i></a>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- Area Chart -->
+        <div class="col-xl-12 col-lg-7">
+            <div class="card shadow mb-4">
+                
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- Content Column -->
+        <div class="col-lg-12 mb-4">
+            <!-- Color System -->
+            <div class="row">
+                <div class="col-lg-12 mb-3">
+                    <div class="card bg-secondary text-white shadow">
+                        <div class="card-body">
+                            Petrobras
+                            <div class="text-white-50 small">#Petróleo Brasileiro S.A. é uma empresa de capital aberto, 
+                                cujo acionista majoritário é o Governo do Brasil, <br/>
+                                 sendo, portanto, uma empresa estatal de economia mista. </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 mb-3">
+                    <div class="card bg-light text-black shadow">
+                        <div class="card-body">
+                            Bradesco SA
+                            <div class="text-black-50 small">#Bradesco é um banco brasileiro, constituído na forma de sociedade anônima, 
+                                <br/> com sede em Osasco, em São Paulo. </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /.container-fluid -->
+
+{% endblock %}
