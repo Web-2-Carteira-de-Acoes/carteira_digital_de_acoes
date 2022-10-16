@@ -20,5 +20,6 @@ from . import view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name="dashboard.html")),
+    path('', TemplateView.as_view(template_name="dashboard.html"), name='dashboard'),
+    path('Listar_Acoes', TemplateView.as_view(template_name="acoes/acoes.html"))
 ]
