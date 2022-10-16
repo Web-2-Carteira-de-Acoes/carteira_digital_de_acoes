@@ -1,5 +1,3 @@
-# Carteira de Ações
-
 - Entre no vs code
 - dê um "git clone https://github.com/Web-2-Carteira-de-Acoes/carteira_digital_de_acoes.git" no terminal
 - abra a pasta que foi criada com o vs code
@@ -28,4 +26,3 @@ Já estará rodando sua aplicação
 ---
 
 ![cd_acoes_carteira](https://user-images.githubusercontent.com/71037296/196042982-f6d0eae9-5de5-4382-b537-e032b6916329.png)
-
