@@ -1,0 +1,57 @@
+
+{% extends 'layout/layout.html' %}
+{%load static %}
+{% block title %}Criar Carteira{% endblock %}
+{% block css %}
+<link href={% static "css/styles_layout.css" %} rel="stylesheet">
+{% endblock %}
+{% block content %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <form method="post">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Nome da Carteira" aria-label="Nome_Carteira">
+        </div>
+
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-criar-carteira">
+                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                <label class="form-check-label" for="firstCheckbox">Ação x</label>
+
+                <label class="form-check-label" for="quantidadeid">Data de aquisição</label>
+                <input class="" type="date" id="" value="dd/mm/aaaa" />
+                
+                <label class="form-check-label" for="preco">Preço por ação</label>
+                <input class="" type="text" placeholder="RX,XX" aria-label="R X,XX" />
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                <label class="form-check-label" for="firstCheckbox">Ação y</label>
+
+                <label class="form-check-label" for="quantidadeid">Data de aquisição</label>
+                <input class="" type="date" id="" value="dd/mm/aaaa" />
+                
+                <label class="form-check-label" for="preco">Preço por ação</label>
+                <input class="" type="text" placeholder="RX,XX" aria-label="R X,XX" />
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                <label class="form-check-label" for="firstCheckbox">Ação Z</label>
+
+                <label class="form-check-label" for="quantidadeid">Data de aquisição</label>
+                <input class="" type="date" id="" value="dd/mm/aaaa" />
+                
+                <label class="form-check-label" for="preco">Preço por ação</label>
+                <input class="" type="text" placeholder="RX,XX" aria-label="R X,XX" />
+            </li>
+        </ul>
+    </form>
+
+</div>
+           
+    </div>
+</div>
+
+{% endblock %}
