@@ -21,5 +21,12 @@ from . import view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name="dashboard.html"), name='dashboard'),
-    path('Listar_Acoes', TemplateView.as_view(template_name="acoes/acoes.html"))
+    path('Listar_Acoes', TemplateView.as_view(template_name="acoes/acoes.html")),
+    path('cadastro', TemplateView.as_view(template_name="acoes/cadastro.html")),
+    path('configuracoesdeusuario', TemplateView.as_view(template_name="acoes/configuracoesdeusuario.html")),
+    path('telainicial2', TemplateView.as_view(template_name="acoes/telainicial2.html")),
+    path('telainicial4', TemplateView.as_view(template_name="acoes/telainicial4.html")),
+    path('telainicial6', TemplateView.as_view(template_name="acoes/telainicial6")),
+     path('telainicial8', TemplateView.as_view(template_name="acoes/telainicial8.html"))    
+    
 ]
