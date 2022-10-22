@@ -13,9 +13,9 @@
     border-radius: 10px;
 }
 
-.list-group-item-criar-carteira{
-    display: flex;
-    justify-content: space-between;
+.table-overflow{
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 #wrapper #content-wrapper {
@@ -24,4 +24,8 @@
 
 #linktelalimpa{
     margin: 5px;
+}
+
+#tituloRelatGeral{
+    border-radius: 10px;
 }
