@@ -13,6 +13,19 @@
     border-radius: 10px;
 }
 
+.table-overflow{
+    max-height: 400px;
+    overflow-y: auto;
+}
+
 #wrapper #content-wrapper {
     background-color: #E7F5F5;
+}
+
+#linktelalimpa{
+    margin: 5px;
+}
+
+#tituloRelatGeral{
+    border-radius: 10px;
 }
