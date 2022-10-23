@@ -1,0 +1,68 @@
+
+{% extends 'layout/layout.html' %}
+{%load static %}
+{% block title %}Criar Carteira{% endblock %}
+{% block css %}
+<link href={% static "css/styles_layout.css" %} rel="stylesheet">
+{% endblock %}
+{% block content %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <form method="post">
+        <div class="row">
+            <div class="input-group mb-3 col">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Nome da Carteira" aria-label="Nome_Carteira">
+            </div>
+            <div class="col">
+                <a href="#" class="btn btn-link">
+                    Filtro
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter-right" viewBox="0 0 16 16">
+                        <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z"/>
+                    </svg>
+                </a>
+            </div>        
+        </div>
+
+
+        <ul class="list-group">
+            <li class="list-group-item d-flex pl-4 pt-2 pb-2 bd-highlight">
+                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                <label class="form-check-label flex-fill" for="firstCheckbox">Ação x</label>
+
+                <label class="form-check-label text-right pr-2 flex-fill" for="quantidadeid">Data de aquisição</label>
+                <input class="" type="date" id="" value="dd/mm/aaaa" />
+                
+                <label class="form-check-label text-right pr-2 flex-fill" for="preco">Preço por ação</label>
+                <input class="" type="text" placeholder="RX,XX" aria-label="R X,XX" />
+            </li>
+            <li class="list-group-item d-flex pl-4 pt-2 pb-2 bd-highlight">
+                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                <label class="form-check-label flex-fill" for="firstCheckbox">Ação y</label>
+
+                <label class="form-check-label text-right pr-2 flex-fill" for="quantidadeid">Data de aquisição</label>
+                <input class="" type="date" id="" value="dd/mm/aaaa" />
+                
+                <label class="form-check-label text-right pr-2 flex-fill" for="preco">Preço por ação</label>
+                <input class="" type="text" placeholder="RX,XX" aria-label="R X,XX" />
+            </li>
+            <li class="list-group-item d-flex pl-4 pt-2 pb-2 bd-highlight">
+                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                <label class="form-check-label flex-fill" for="firstCheckbox">Ação Z</label>
+
+                <label class="form-check-label text-right pr-2 flex-fill" for="quantidadeid">Data de aquisição</label>
+                <input class="" type="date" id="" value="dd/mm/aaaa" />
+                
+                <label class="form-check-label text-right pr-2 flex-fill" for="preco">Preço por ação</label>
+                <input class="" type="text" placeholder="RX,XX" aria-label="R X,XX" />
+            </li>
+        </ul>
+    </form>
+
+</div>
+           
+    </div>
+</div>
+
+{% endblock %}

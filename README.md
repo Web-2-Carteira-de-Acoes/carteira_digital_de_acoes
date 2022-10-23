@@ -11,7 +11,7 @@ $ virtualenv venv -p python3
 
 $ source venv/bin/activate
 
-(venv) $ pip freeze  # Note we are now on the virtual environment we created
+(venv) $ pip install -r requirements.txt  # Note we are now on the virtual environment we created
 
 (venv) $ pip install django==3.2.8
 
