@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # App Interno para o Usuário
+    'usuarios'
 ]
 
 MIDDLEWARE = [
@@ -75,10 +78,25 @@ WSGI_APPLICATION = 'cd_acoes.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# Comentei o código referente a conecxão com o banco mysql, para começar a fazer uso do banco Postgress
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+#  Realizando a conecxão do Django, com o banco postgress, usando o banco do sisfis no ceteia
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cd_acoes',
+        'USER': 'sisfis',
+        'PASSWORD': 'sisfis2022',
+        'HOST': '200.128.100.19',
+        'PORT': '15432'
     }
 }
 
