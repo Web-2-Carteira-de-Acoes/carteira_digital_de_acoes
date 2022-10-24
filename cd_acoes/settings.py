@@ -35,6 +35,8 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'acao.apps.AcaoConfig',
     'carteira.apps.CarteiraConfig',
+    'historico.apps.HistoricoConfig',
+    'transacao.apps.TransacaoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
