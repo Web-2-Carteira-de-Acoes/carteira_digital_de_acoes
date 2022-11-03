@@ -2,10 +2,13 @@
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.urls import path
-from . import views
+from .views import create_acoe, delete_acoe, list_acoes, update_acoe
 
-#  Rotas, para a APP de usuário
+#  Rotas, para a APP de acao
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name="acoes/acoes.html")),
+    path('', list_acoes, name='list_acoes'),
+    path('novo', create_acoe, name='create_acao'),
+    path('update/<int:id>/', update_acoe, name='update_acao'),
+    path('deletar/<int:id>/', delete_acoe, name='delete_acao'),
 ]
