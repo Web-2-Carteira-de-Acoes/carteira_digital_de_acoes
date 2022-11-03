@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Register seu models aqui.
-from .models import Carteiras
+from .models import Carteira
 
-admin.site.register(Carteiras)
+admin.site.register(Carteira)

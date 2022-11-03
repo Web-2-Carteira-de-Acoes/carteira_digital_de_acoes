@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Register seu models aqui.
-from .models import Acoes
+from .models import Acoe
 
-admin.site.register(Acoes)
+admin.site.register(Acoe)
