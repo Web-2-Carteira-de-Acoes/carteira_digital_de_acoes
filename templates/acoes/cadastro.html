@@ -1,10 +1,16 @@
-
-
+{% extends 'layout/layout.html' %}
+{%load static %}
+{% block title %}cadastro{% endblock %}
+{% block css %}
 <link href={% static "css/styles_layout.css" %} rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+
 
 <div class="container">
 <div class="image"><img src=""></div>
-<div class="mb-3">
+<div class="mb-2">
     <label for="formGroupExampleInput" class="form-label">Nome completo:</label>
     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Seu nome completo">
   </div>
@@ -29,3 +35,5 @@
     <button type="submit" class="btn btn-primary">Cadastrar</button>
   </div>
 </div>
+
+{% endblock %}

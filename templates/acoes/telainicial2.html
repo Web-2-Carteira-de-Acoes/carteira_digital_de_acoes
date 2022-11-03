@@ -1,4 +1,12 @@
+{% extends 'layout/layout.html' %}
+{%load static %}
+{% block title %}inicial2{% endblock %}
+{% block css %}
 <link href={% static "css/styles_layout.css" %} rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+
 
 <div class="mb-4">   
     <button type="button" class="btn btn-primary">Adicionar nova carteira</button>
@@ -12,3 +20,5 @@
 
 
 </div>
+
+{% endblock %}

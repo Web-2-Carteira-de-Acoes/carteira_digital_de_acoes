@@ -1,4 +1,10 @@
+{% extends 'layout/layout.html' %}
+{%load static %}
+{% block title %}edicaodacarteira{% endblock %}
+{% block css %}
 <link href={% static "css/styles_layout.css" %} rel="stylesheet">
+{% endblock %}
+{% block content %}
 
 
 <nav class="navbar bg-light">
@@ -11,3 +17,5 @@
     <button type="button" class="btn btn-primary">Comprar</button>
     <button type="button" class="btn btn-primary">Vender</button>
   </nav>
+
+  {% endblock %}
