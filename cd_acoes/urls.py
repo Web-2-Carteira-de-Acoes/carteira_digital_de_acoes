@@ -34,7 +34,8 @@ urlpatterns = [
     path('Infos_Acoes', TemplateView.as_view(template_name="acoes/informacoes_sobre_as_acoes.html")),
     path('Relatorio_Geral', TemplateView.as_view(template_name="acoes/relatorio_geral.html")),
     path('Relatorio_Especifico_Carteira', TemplateView.as_view(template_name="acoes/relatorios_especificos_carteira.html")),
-    path('login/', include('usuarios.urls'))
+    path('usuarios/', include('usuarios.urls')),
+    path('acoes/', include('acoes.urls')),
+    path('carteiras/', include('carteiras.urls')),
  
-
 ]
