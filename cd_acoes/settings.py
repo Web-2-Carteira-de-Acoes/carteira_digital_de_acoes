@@ -33,8 +33,6 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'acao.apps.AcaoConfig',
-    'carteira.apps.CarteiraConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,7 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # App Interno para o Usuário
-    'usuarios'
+    'usuarios',
+
+    # App Interno para o Carteira
+    'carteiras',
+
+    # App Interno para o Ação
+    'acoes',
+
 ]
 
 MIDDLEWARE = [
@@ -88,6 +93,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+
 
 #  Realizando a conexão do Django, com o banco postgress, usando o banco do sisfis no ceteia
 
