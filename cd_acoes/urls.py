@@ -48,11 +48,10 @@ urlpatterns = [
 
     path('usuarios/', include('usuarios.urls')),
     path('acoes/', include('acoes.urls')),
-    path('carteiras/', include('carteiras.urls')),
+    path('carteiras/', include('carteiras.urls'))
 
  
 
-    path('login/', include('usuarios.urls'))
 
 ]
 
