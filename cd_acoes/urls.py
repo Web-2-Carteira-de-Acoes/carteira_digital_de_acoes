@@ -31,7 +31,6 @@ urlpatterns = [
     path('Relatorio_Geral', TemplateView.as_view(template_name="acoes/relatorio_geral.html")),
     path('Relatorio_Especifico_Carteira', TemplateView.as_view(template_name="acoes/relatorios_especificos_carteira.html")),
     
-   
     path('cadastro', TemplateView.as_view(template_name="acoes/cadastro.html")),
     path('Listar_Acoes', TemplateView.as_view(template_name="acoes/acoes.html")),
     path('configuracoesdeusuario', TemplateView.as_view(template_name="acoes/configuracoesdeusuario.html")),
@@ -39,5 +38,13 @@ urlpatterns = [
     path('telainicial4', TemplateView.as_view(template_name="acoes/telainicial4.html")),
     path('telainicial6', TemplateView.as_view(template_name="acoes/telainicial6")),
     path('telainicial8', TemplateView.as_view(template_name="acoes/telainicial8.html")),
+
+    path('usuarios/', include('usuarios.urls')),
+    path('acoes/', include('acoes.urls')),
+    path('carteiras/', include('carteiras.urls')),
+ 
+
     path('login/', include('usuarios.urls'))
-    ]
+
+]
+
