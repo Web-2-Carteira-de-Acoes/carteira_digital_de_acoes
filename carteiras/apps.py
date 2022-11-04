@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class CarteiraConfig(AppConfig):
+class CarteirasConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'carteira'
+    name = 'carteiras'
