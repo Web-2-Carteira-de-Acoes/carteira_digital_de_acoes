@@ -42,10 +42,6 @@ urlpatterns = [
    
     path('login/', include('usuarios.urls')),
 
-    path('telainicial4', TemplateView.as_view(template_name="acoes/telainicial4.html")),
-    path('telainicial6', TemplateView.as_view(template_name="acoes/telainicial6")),
-    path('telainicial8', TemplateView.as_view(template_name="acoes/telainicial8.html")),
-
     path('usuarios/', include('usuarios.urls')),
     path('acoes/', include('acoes.urls')),
     path('carteiras/', include('carteiras.urls'))

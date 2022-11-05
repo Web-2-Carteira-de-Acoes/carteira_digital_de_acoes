@@ -1,7 +1,7 @@
 {% extends 'layout/layout.html' %}
 {%load static %}
 
-{% block title %}Cadastro{% endblock %}
+{% block title %}configuracoesdeusuario{% endblock %}
 {% block css %}
 <link href={% static "css/styles_layout.css" %} rel="stylesheet">
 {% endblock %}
@@ -9,10 +9,24 @@
 
 
 
+<body >
+  <div class="container py-5 h-100" >
 
+   
+   
+  <div class="d-flex justify-content-center align-items-center h-130">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card cardlogin text-black" style="border-radius: 1rem; background-color: #c0c0c0">
+            <div class="card-body p-3 ps-3 pe-3 text-center" style="height: 100%;">
+
+
+              
 
 <div class="container">
-    <button type="button" class="btn btn-primary">Editar</button>
+
+  <img src="images">
+  <br>
+  <button class="btn bg-primary btn-lg px-0" type="submit" style="border-radius: 2em; color: white; " >Editar</button>
 
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Nome completo:</label>
@@ -32,9 +46,17 @@
       </div>
     
       <div class="col-12">
-        <button type="submit" class="btn btn-primary">Salvar</button>
+        <button class="btn btn-outline-primary btn-lg px-4" type="submit">Salvar</button>
       </div>
-
+    </div>
+  </div>
 </div>
+</div>
+</div>
+</div>
+
+
+
+</body>
 
 {% endblock %}
