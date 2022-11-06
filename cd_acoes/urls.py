@@ -34,13 +34,7 @@ urlpatterns = [
     path('Infos_Acoes', TemplateView.as_view(template_name="acoes/informacoes_sobre_as_acoes.html")),
     path('Relatorio_Geral', TemplateView.as_view(template_name="acoes/relatorio_geral.html")),
     path('Relatorio_Especifico_Carteira', TemplateView.as_view(template_name="acoes/relatorios_especificos_carteira.html")),
-<<<<<<< HEAD
-    path('login/', include('usuarios.urls'))
-=======
-    
-    path('cadastro', TemplateView.as_view(template_name="acoes/cadastro.html")),
-    path('Listar_Acoes', TemplateView.as_view(template_name="acoes/acoes.html")),
-    path('configuracoesdeusuario', TemplateView.as_view(template_name="acoes/configuracoesdeusuario.html")),
+
     path('telainicial2', TemplateView.as_view(template_name="acoes/telainicial2.html")),
 
     path('edicaodacarteira', TemplateView.as_view(template_name="acoes/edicaodacarteira.html")),
@@ -53,7 +47,6 @@ urlpatterns = [
     path('acoes/', include('acoes.urls')),
     path('carteiras/', include('carteiras.urls'))
 
->>>>>>> 31d520a8cdb43d3eab8741c0b730c97792e47e6a
- 
+
 
 ]

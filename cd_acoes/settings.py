@@ -45,7 +45,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # App Interno para o Usuário
-    'usuarios'
+    # App Interno para o Usuário
+    'usuarios',
+
+    # App Interno para o Carteira
+    'carteiras',
+
+    # App Interno para o Ação
+    'acoes',
 ]
 
 MIDDLEWARE = [
