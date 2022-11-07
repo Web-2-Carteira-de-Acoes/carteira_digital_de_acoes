@@ -91,17 +91,21 @@ WSGI_APPLICATION = 'cd_acoes.wsgi.application'
 
 # Comentei o código referente a conecxão com o banco mysql, para começar a fazer uso do banco Postgress
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+     }
+}
 
 #  Realizando a conecxão do Django, com o banco postgress, usando o banco do sisfis no ceteia
 
 #DATABASES = {
+<<<<<<< HEAD
 #    'default': {
+=======
+#   'default': {
+>>>>>>> 74ccf572ba69cb26c701b281ab6c1341093875ac
 #        'ENGINE': 'django.db.backends.postgresql',
 #        'NAME': 'cd_acoes',
 #        'USER': 'sisfis',
@@ -110,6 +114,7 @@ WSGI_APPLICATION = 'cd_acoes.wsgi.application'
 #        'PORT': '15432'
 #    }
 #}
+<<<<<<< HEAD
 
 
 DATABASES = {
@@ -118,6 +123,8 @@ DATABASES = {
          'NAME': BASE_DIR / 'db.sqlite3',
      }
  }
+=======
+>>>>>>> 74ccf572ba69cb26c701b281ab6c1341093875ac
 
 
 # Password validation
