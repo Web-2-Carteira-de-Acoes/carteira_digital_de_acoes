@@ -101,11 +101,10 @@ DATABASES = {
 #  Realizando a conecxão do Django, com o banco postgress, usando o banco do sisfis no ceteia
 
 #DATABASES = {
-<<<<<<< HEAD
+
 #    'default': {
-=======
+
 #   'default': {
->>>>>>> 74ccf572ba69cb26c701b281ab6c1341093875ac
 #        'ENGINE': 'django.db.backends.postgresql',
 #        'NAME': 'cd_acoes',
 #        'USER': 'sisfis',
@@ -114,7 +113,7 @@ DATABASES = {
 #        'PORT': '15432'
 #    }
 #}
-<<<<<<< HEAD
+
 
 
 DATABASES = {
@@ -123,8 +122,7 @@ DATABASES = {
          'NAME': BASE_DIR / 'db.sqlite3',
      }
  }
-=======
->>>>>>> 74ccf572ba69cb26c701b281ab6c1341093875ac
+
 
 
 # Password validation
