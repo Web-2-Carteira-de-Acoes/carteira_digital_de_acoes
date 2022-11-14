@@ -29,3 +29,14 @@
 #tituloRelatGeral{
     border-radius: 10px;
 }
+
+/*Botão de criar a primeira carteira na Tela Inicial*/
+.botaocriarPcarteira{
+    background-color: rgb(163, 163, 163);
+    box-shadow: 15px 15px 9px gray;
+}
+
+/*TExto para criar a primeira carteira na Tela Inicial*/
+#textBotaoPrimCart{
+    font-size: large;
+}
