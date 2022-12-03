@@ -37,3 +37,6 @@ def delete_acoe(request, id):
         return redirect('list_acoes')
 
     return render(request, 'acao-delete-confirm.html', {'acao': acao})
+
+#def buscar_acao():
+    
