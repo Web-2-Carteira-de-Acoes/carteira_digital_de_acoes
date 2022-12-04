@@ -1,6 +1,11 @@
 from django.shortcuts import render, redirect
 from .models import Acoe
 from .forms import AcoesForm
+import yfinance as yf
+from pprint import pprint
+from inspect import getmembers
+
+
 
 
 def list_acoes(request):
@@ -38,5 +43,12 @@ def delete_acoe(request, id):
 
     return render(request, 'acao-delete-confirm.html', {'acao': acao})
 
-#def buscar_acao():
+def buscar_acao(request):
+    teste = yf.Ticker("BBDC4.SA")
+    
+   
+    
+    return render(request ,'acoes/teste.html', {'teste': teste.info})
+    
+    
     
