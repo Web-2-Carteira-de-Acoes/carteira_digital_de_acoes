@@ -12,26 +12,27 @@
     <div class="container py-5 h-100">
         <div class="d-flex justify-content-center align-items-center">
             <div class="col-11 ">
-                <div class="card botaocriarPcarteira card-body-custom">
-                    <div class="card-body p-3 ps-3 pe-3 text-center" style="height: 100%;">    
-                        <div class="mt-4">
-                            <div class="form-inline form-black mb-2">
-                                <i class="col-5 bi bi-wallet2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" fill="#05FF00" class="bi bi-wallet2 rotate-n-15" viewBox="0 0 16 16">
-                                        <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
-                                    </svg>
-                                </i>
-                                <p class="col-6" id="textBotaoPrimCart" >
-                                    Crie sua primeira carteira para iniciar o gerenciamento eficaz de seus investimentos
-                                    <a class="btn btn-outline btn-custom " role="button" href="Criar_Carteira">
-                                        <svg class="bi bi-plus-circle container d-flex" fill="#05FF00" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="text-shadow: 6px 7px 5px #6565658f;">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                        </svg>
-                                    </a>
-                                </p>
+                <div class="card" style="border-radius: 20px;">
+                    <!---->
+                    <div class="card-body text-center mb-5000 rounded" style="background-color: rgba(225, 225, 225, 1); box-shadow: 15px 15px 9px gray;">    
+                        <div class="mt-4 mb-0">
+                            <div class="form-inline form-black ">
+                                <div class="w-50 col">
+                                    <img src={% static "img/carteira_icone.png" %} style="height: 200px; width:200px;">
+                                </div>
+                                <div class="w-50">
+                                    <p class="col-6 mx-auto text-center lead fw-bold display-6 h-40" style="text-shadow: 0.1em 0.1em 0.20em gray;">
+                                        <strong>
+                                            <b>Crie sua primeira carteira para iniciar o gerenciamento eficaz de seus investimentos</b> <br>
+                                            <a class="rounded-circle mt-4" role="button" href="Criar_Carteira" style="height: fit-content; width: fit-content;">
+                                                <img class="img-thumbnail img-fluid rounded-circle mt-4" style="height: 100px; width: 100px;" src={% static "img/icons8-plus-67.png" %}>
+                                                
+                                            </a>
+                                        </strong>
+                                        
+                                    </p>
+                                </div>
                             </div>
-    
                         </div>
                     </div>
                 </div>
