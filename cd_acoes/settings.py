@@ -33,8 +33,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'acao.apps.AcaoConfig',
-    'carteira.apps.CarteiraConfig',
+    
     'historico.apps.HistoricoConfig',
     'transacao.apps.TransacaoConfig',
     'django.contrib.admin',
