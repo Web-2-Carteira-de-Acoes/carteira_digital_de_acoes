@@ -10,16 +10,28 @@
 <div class="container-fluid">
 
     <div class="overflow-hiden m-5">
-        <div class="row">
-            <div class="col">
-                <div class="p-3 border-bottom-secondary bg-light rounded h2" style="color: blue;">Escolha as ações para essa carteira</div>
+        <div class="row justify-content-around">
+
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="p-3 
+                border-bottom-secondary 
+                bg-light 
+                rounded 
+                text-lg-h2 
+                text-md-h33
+                text-sm-h5" style="color: blue;">Escolha as ações para essa carteira</div>
             </div>
 
-            <div class="col">
-                <div class="p-3 h3" style="width: fit-content;">
-                    <a href="#" class="btn btn-link">
+            <div class="col-lg-3 col-md-6 col-sm-6" 
+            style="width: fit-content;">
+                <button class="btn btn-outline-info btn-lg mt-sm-2 m-md-3 m-lg-0 mt-lg-1 mb-2 p-lg-2" type="button">Buscar ações</button>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-sm-3 mt-md-4 mt-lg-2">
+                <div class="p-lg-2">
+                    <a href="#" class="btn-link text-lg-h2 text-md-h3 text-sm-h5"> <!---->
                         Filtro
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter-right" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-filter-right" width="35px" height="35px" viewBox="0 0 16 16">
                             <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z"/>
                         </svg>
                     </a>
@@ -35,64 +47,72 @@
 
         </div>
     
-        <form action="" method="post" class="ms-1 ps-6">
+        <form action="" method="post" class="p-0 m-0 mt-lg-3">
 
             <!--d-flex flex-column justify-content-center align-items-center-->
             <ul class="list-group">
-                <li class="list-group-item d-flex align-items-center pl-4 pt-2 m-2 pb-2 bd-highlight rounded" style="height: 90px; background-color: rgba(37, 37, 37, 0.08);">
+                <li class="row justify-content-around list-group-item pl-4 pt-2 m-0 mb-2 pb-2 bd-highlight rounded" style="height: fit-content; background-color: rgba(37, 37, 37, 0.08);">
                     
                     <!--Campos que devem ser preenchidos pela biblioteca que trará os dados das ações-->
-                    <input class="form-check-input me-1 inputCriarCarteira" type="checkbox" value="" id="acao1">
-                    <img src="" id="imgAcao" alt="AÇÃO X"/>
-                    <label class="form-check-label flex-fill" for="acao1">Informações sobre a ação x</label>
+                    <input class="form-check-input me-1 mb-2 col-sm-1 col-md-1 col-lg-1 col-xl-1 order-first" type="checkbox" value="" id="acao1">
+                    <img src="" id="imgAcao" alt="AÇÃO X" class="mb-2 col-sm-11 col-md-6 col-lg-3 col-xl-3 offset-xl-1"/>
 
-                    <label class="form-check-label text-right pr-2 flex-fill" for="quantidadeid">Data de aquisição</label>
-                    <input class="" type="date" id="" value="dd/mm/aaaa" />
+                    <label class="form-check-label flex-fill mb-2 col-sm-12 col-md-8 col-lg-7 col-xl-8 offset-xl-1" for="acao1">Informações sobre a ação x</label>
+
+                    <label class="form-check-label pr-2 flex-fill mb-2 col-sm-12 col-md-5 col-lg-5 col-xl-3 text-sm-start text-md-end text-lg-end text-xl-end " for="quantidadeid">Data de aquisição</label>
+                    <input class="mb-2 col-sm-12 col-md-7 col-lg-7 col-xl-3 w-auto " type="date" id="" value="dd/mm/aaaa" />
                     
-                    <label class="form-check-label text-right pr-2 flex-fill" for="preco">Preço por ação</label>
-                    <input class="" type="text" placeholder="RX,XX" aria-label="R X,XX" />
+                    <label class="form-check-label pr-2 flex-fill mb-2 col-sm-12 col-md-5 col-lg-5 col-xl-3 text-sm-start text-md-end text-lg-end text-xl-end" for="preco">Preço por ação</label>
+                    <input class="mb-2 col-sm-12 col-md-6 col-lg-7 col-xl-3 w-auto" type="number" step="0.01" placeholder="R$" name="valor" min="0.01"/>
+                
                 </li>
 
-                <li class="list-group-item d-flex align-items-center pl-4 pt-2 m-2 pb-2 bd-highlight rounded" style="height: 90px; background-color: rgba(37, 37, 37, 0.08);">
+                <li class="row justify-content-around list-group-item pl-4 pt-2 m-0 mb-2 pb-2 bd-highlight rounded" style="height: fit-content; background-color: rgba(37, 37, 37, 0.08);">
                     
                     <!--Campos que devem ser preenchidos pela biblioteca que trará os dados das ações-->
-                    <input class="form-check-input me-1 inputCriarCarteira" type="checkbox" value="" id="acao1">
-                    <img src="" id="imgAcao" alt="AÇÃO X"/>
-                    <label class="form-check-label flex-fill" for="acao1">Informações sobre a ação x</label>
+                    <input class="form-check-input me-1 mb-2 col-sm-1 col-md-1 col-lg-1 col-xl-1 order-first" type="checkbox" value="" id="acao1">
+                    <img src="" id="imgAcao" alt="AÇÃO X" class="mb-2 col-sm-11 col-md-6 col-lg-3 col-xl-3 offset-xl-1"/>
 
-                    <label class="form-check-label text-right pr-2 flex-fill" for="quantidadeid">Data de aquisição</label>
-                    <input class="" type="date" id="" value="dd/mm/aaaa" />
+                    <label class="form-check-label flex-fill mb-2 col-sm-12 col-md-8 col-lg-7 col-xl-8 offset-xl-1" for="acao1">Informações sobre a ação x</label>
+
+                    <label class="form-check-label pr-2 flex-fill mb-2 col-sm-12 col-md-5 col-lg-5 col-xl-3 text-sm-start text-md-end text-lg-end text-xl-end " for="quantidadeid">Data de aquisição</label>
+                    <input class="mb-2 col-sm-12 col-md-7 col-lg-7 col-xl-3 w-auto " type="date" id="" value="dd/mm/aaaa" />
                     
-                    <label class="form-check-label text-right pr-2 flex-fill" for="preco">Preço por ação</label>
-                    <input class="" type="text" placeholder="RX,XX" aria-label="R X,XX" />
+                    <label class="form-check-label pr-2 flex-fill mb-2 col-sm-12 col-md-5 col-lg-5 col-xl-3 text-sm-start text-md-end text-lg-end text-xl-end" for="preco">Preço por ação</label>
+                    <input class="mb-2 col-sm-12 col-md-6 col-lg-7 col-xl-3 w-auto" type="number" step="0.01" placeholder="R$" name="valor" min="0.01"/>
+                
                 </li>
 
-                <li class="list-group-item d-flex align-items-center pl-4 pt-2 m-2 pb-2 bd-highlight rounded" style="height: 90px; background-color: rgba(37, 37, 37, 0.08);">
+                <li class="row justify-content-around list-group-item pl-4 pt-2 m-0 mb-2 pb-2 bd-highlight rounded" style="height: fit-content; background-color: rgba(37, 37, 37, 0.08);">
                     
                     <!--Campos que devem ser preenchidos pela biblioteca que trará os dados das ações-->
-                    <input class="form-check-input me-1 inputCriarCarteira" type="checkbox" value="" id="acao1">
-                    <img src="" id="imgAcao" alt="AÇÃO X"/>
-                    <label class="form-check-label flex-fill" for="acao1">Informações sobre a ação x</label>
+                    <input class="form-check-input me-1 mb-2 col-sm-1 col-md-1 col-lg-1 col-xl-1 order-first" type="checkbox" value="" id="acao1">
+                    <img src="" id="imgAcao" alt="AÇÃO X" class="mb-2 col-sm-11 col-md-6 col-lg-3 col-xl-3 offset-xl-1"/>
 
-                    <label class="form-check-label text-right pr-2 flex-fill" for="quantidadeid">Data de aquisição</label>
-                    <input class="" type="date" id="" value="dd/mm/aaaa" />
+                    <label class="form-check-label flex-fill mb-2 col-sm-12 col-md-8 col-lg-7 col-xl-8 offset-xl-1" for="acao1">Informações sobre a ação x</label>
+
+                    <label class="form-check-label pr-2 flex-fill mb-2 col-sm-12 col-md-5 col-lg-5 col-xl-3 text-sm-start text-md-end text-lg-end text-xl-end " for="quantidadeid">Data de aquisição</label>
+                    <input class="mb-2 col-sm-12 col-md-7 col-lg-7 col-xl-3 w-auto " type="date" id="" value="dd/mm/aaaa" />
                     
-                    <label class="form-check-label text-right pr-2 flex-fill" for="preco">Preço por ação</label>
-                    <input class="" type="text" placeholder="RX,XX" aria-label="R X,XX" />
+                    <label class="form-check-label pr-2 flex-fill mb-2 col-sm-12 col-md-5 col-lg-5 col-xl-3 text-sm-start text-md-end text-lg-end text-xl-end" for="preco">Preço por ação</label>
+                    <input class="mb-2 col-sm-12 col-md-6 col-lg-7 col-xl-3 w-auto" type="number" step="0.01" placeholder="R$" name="valor" min="0.01"/>
+                
                 </li>
 
-                <li class="list-group-item d-flex align-items-center pl-4 pt-2 m-2 pb-2 bd-highlight rounded" style="height: 90px; background-color: rgba(37, 37, 37, 0.08);">
+                <li class="row justify-content-around list-group-item pl-4 pt-2 m-0 mb-2 pb-2 bd-highlight rounded" style="height: fit-content; background-color: rgba(37, 37, 37, 0.08);">
                     
                     <!--Campos que devem ser preenchidos pela biblioteca que trará os dados das ações-->
-                    <input class="form-check-input me-1 inputCriarCarteira" type="checkbox" value="" id="acao1">
-                    <img src="" id="imgAcao" alt="AÇÃO X"/>
-                    <label class="form-check-label flex-fill" for="acao1">Informações sobre a ação x</label>
+                    <input class="form-check-input me-1 mb-2 col-sm-1 col-md-1 col-lg-1 col-xl-1 order-first" type="checkbox" value="" id="acao1">
+                    <img src="" id="imgAcao" alt="AÇÃO X" class="mb-2 col-sm-11 col-md-6 col-lg-3 col-xl-3 offset-xl-1"/>
 
-                    <label class="form-check-label text-right pr-2 flex-fill" for="quantidadeid">Data de aquisição</label>
-                    <input class="" type="date" id="" value="dd/mm/aaaa" />
+                    <label class="form-check-label flex-fill mb-2 col-sm-12 col-md-8 col-lg-7 col-xl-8 offset-xl-1" for="acao1">Informações sobre a ação x</label>
+
+                    <label class="form-check-label pr-2 flex-fill mb-2 col-sm-12 col-md-5 col-lg-5 col-xl-3 text-sm-start text-md-end text-lg-end text-xl-end " for="quantidadeid">Data de aquisição</label>
+                    <input class="mb-2 col-sm-12 col-md-7 col-lg-7 col-xl-3 w-auto " type="date" id="" value="dd/mm/aaaa" />
                     
-                    <label class="form-check-label text-right pr-2 flex-fill" for="preco">Preço por ação</label>
-                    <input class="" type="text" placeholder="RX,XX" aria-label="R X,XX" />
+                    <label class="form-check-label pr-2 flex-fill mb-2 col-sm-12 col-md-5 col-lg-5 col-xl-3 text-sm-start text-md-end text-lg-end text-xl-end" for="preco">Preço por ação</label>
+                    <input class="mb-2 col-sm-12 col-md-6 col-lg-7 col-xl-3 w-auto" type="number" step="0.01" placeholder="R$" name="valor" min="0.01"/>
+                
                 </li>
             </ul>
 
