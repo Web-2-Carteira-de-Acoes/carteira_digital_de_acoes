@@ -36,6 +36,11 @@
     box-shadow: 15px 15px 9px gray;
 }
 
+/*Cor do campo dos imputs na criação de carteira*/
+.inputCriarCarteira{
+    background-color: rgba(37, 37, 37, 0.08);
+}
+
 /*TExto para criar a primeira carteira na Tela Inicial*/
 #textBotaoPrimCart{
     font-size: large;

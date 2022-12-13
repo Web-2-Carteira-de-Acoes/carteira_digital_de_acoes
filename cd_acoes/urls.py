@@ -25,13 +25,13 @@ urlpatterns = [
     
 #ana
     path('Login', TemplateView.as_view(template_name="layout/formularios/login.html")),
+    path('Esqueceu_Senha', TemplateView.as_view(template_name="layout/formularios/esqueceu_senha.html")),
+    path('Tela_Inicial', TemplateView.as_view(template_name="layout/telas_Iniciais/tela_inicial.html")),
     path('Listar_Acoes', TemplateView.as_view(template_name="layout/acoes/acoes.html")),
-    path('Tela_Inicial', TemplateView.as_view(template_name="layout/telas_iniciais/tela_inicial.html")),
     path('Criar_Carteira', TemplateView.as_view(template_name="layout/carteiras/criar_carteira.html")),
     path('Infos_Acoes', TemplateView.as_view(template_name="layout/acoes/informacoes_sobre_as_acoes.html")),
     path('Relatorio_Geral', TemplateView.as_view(template_name="layout/relatorios/relatorio_geral.html")),
     path('Relatorio_Especifico_Carteira', TemplateView.as_view(template_name="layout/relatorios/relatorios_especificos_carteira.html")),
-
 
 
 #samara
