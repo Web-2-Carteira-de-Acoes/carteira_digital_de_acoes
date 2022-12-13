@@ -7,3 +7,5 @@ class Carteira(models.Model):
     acao = models.CharField(max_length=200)
     historico = models.CharField(max_length=200)
 
+    def __self__(self):
+            return self.nome

@@ -1,3 +1,4 @@
+{% csrf_token %}    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +9,22 @@
 </head>
 <body>
 
-    <h1> nome: {{teste.longName}}  </h1> 
-    <h1> currentPrice:  {{teste.currentPrice}}</h1>
-    <h1> regularMarketPrice:  {{teste.regularMarketPrice}}</h1>
-    <h1> symbol:  {{teste.symbol}}</h1>
+    <form action="." method="POST">
+        {% csrf_token %}
 
+        {{teste}}
+       
+    <h1> nome: {{teste.longName}}  </h1> 
+    <input type="text" value="{{teste.longName}}" name="nome">
+    <h1> valor_atual:  {{teste.currentPrice}}</h1>
+    <input type="text" value="{{teste.currentPrice}}" name="valor_atual">
+    <h1> quantidade_atual:  {{teste.regularMarketPrice}}</h1>
+    <input type="text" value=" {{teste.regularMarketPrice}}" name="quantidade_atual">
+    <h1> sigla:  {{teste.symbol}}</h1>
+    <input type="text" value="{{teste.symbol}}" name="sigla">
+
+    <input type="submit" value="enviar">
+        </form>
     
     
 </body>
