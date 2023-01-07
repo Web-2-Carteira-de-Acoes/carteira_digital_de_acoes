@@ -48,14 +48,16 @@ def delete_acoe(request, id):
 
 
 def buscar_acao(request):
-    teste = yf.Ticker("BBDC4.SA")
+    tickers = yf.Tickers('msft, aapl, goog, ITSA4.SA, BBDC4.SA')
+
     form = AcoesForm()
     
     
     if request.method == "GET":
     
     
-        return render(request ,'acoes/teste.html', {'teste': teste.info})
+        #return render(request ,'acoes/teste.html', {'teste': tickers.tickers.AAPL})
+        return render(request ,'acoes/teste.html', {'teste': tickers.tickers['ITSA4.SA'].info})
 
     else:
         form = AcoesForm(request.POST)
