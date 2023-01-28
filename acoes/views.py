@@ -4,6 +4,7 @@ from .forms import AcoesForm
 import yfinance as yf
 from pprint import pprint
 from inspect import getmembers
+from .acoes import *
 
 
 
@@ -48,22 +49,30 @@ def delete_acoe(request, id):
 
 
 def buscar_acao(request):
-    tickers = yf.Tickers('msft, aapl, goog, ITSA4.SA, BBDC4.SA')
+    #tickers = yf.Tickers('msft, aapl, goog, ITSA4.SA, BBDC4.SA')
+    #tickers = yf.Tickers('aapl')
+    texto = "MSFT BBDC4.SA"
+    msft = yf.Tickers(texto)
 
     form = AcoesForm()
     
     
-    if request.method == "GET":
+   # if request.method == "GET":
     
+    teste = traserAcoes(False,False,False)
+    teste2 = acoesFiltradas()
     
-        #return render(request ,'acoes/teste.html', {'teste': tickers.tickers.AAPL})
-        return render(request ,'acoes/teste.html', {'teste': tickers.tickers['ITSA4.SA'].info})
+     
 
-    else:
-        form = AcoesForm(request.POST)
-        if form.is_valid():
-            acao = form.save()
-            form = AcoesForm()
+    return render(request ,'acoes/teste.html', {'teste' : teste2 })
+    #return render(request ,'acoes/teste.html', {'teste' : msft.tickers['BBDC4.SA'].info})
+    #return render(request ,'acoes/teste.html', {'teste' : msft.tickers})
+
+    #else:
+    #    form = AcoesForm(request.POST)
+     #   if form.is_valid():
+     #       acao = form.save()
+     #       form = AcoesForm()
             
-        else:
-            return render(request ,'acoes/teste.html', {'teste': 'deu ruim'})
+      #  else:
+      #      return render(request ,'acoes/teste.html', {'teste': 'deu ruim'})
