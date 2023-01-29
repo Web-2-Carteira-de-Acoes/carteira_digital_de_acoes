@@ -31,9 +31,12 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-12 mb-4">
-            <form action="" method="post">
-                <input class="me-1 mb-2 w-auto" type="text" value="" placeholder="Buscar ações" name="buscar_acao" id="buscar_acao">
+        <div class="col-lg-12 mb-4"> 
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input class="me-1 mb-2 w-auto" type="text" value="" placeholder="Buscar ações" name="codigoAcao" id="buscar_acao">
+                <input class="me-1 mb-2 w-auto" type="submit" value="enviar" name="buscar_acao" >
             </form>
         </div>
 
@@ -46,25 +49,38 @@
         <div class="col-lg-12 mb-4">
             <!-- Color System -->
             <div class="row">
+
+                {% if tipo == 'busca' %}
+
                 <div class="col-lg-12 mb-3">
                     <div class="card bg-secondary text-white shadow">
                         <div class="card-body">
-                            Petrobras
-                            <div class="text-white-50 small">#Petróleo Brasileiro S.A. é uma empresa de capital aberto, 
-                                cujo acionista majoritário é o Governo do Brasil, <br/>
-                                 sendo, portanto, uma empresa estatal de economia mista. </div>
+                      
+                            
+                            {{lista.nome}}  Último Preço: R$ {{lista.preco}}
+
+                            <div class="text-white-50 small">{{lista.info}}</div>
                         </div>
                     </div>
                 </div>
+                {% endif %}
+
+                {% if tipo != 'busca' %}
+                {% for list in lista %}
                 <div class="col-lg-12 mb-3">
                     <div class="card bg-light text-black shadow">
                         <div class="card-body">
-                            Bradesco SA
-                            <div class="text-black-50 small">#Bradesco é um banco brasileiro, constituído na forma de sociedade anônima, 
-                                <br/> com sede em Osasco, em São Paulo. </div>
+                                
+                                {{list.nome}}  Último Preço: R$ {{list.preco}}
+                            <div class="text-black-50 small">{{list.info}} </div>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
+
+                {% endif %}
+                
+               
             </div>
 
         </div>

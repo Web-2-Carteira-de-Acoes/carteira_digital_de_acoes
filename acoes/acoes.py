@@ -1,6 +1,6 @@
 import yfinance as yf
 from .codigoAcoes import *
-import array as arr 
+from collections import namedtuple
 
 
 def traserAcoes(codigo, tipo, pediod):
@@ -36,3 +36,16 @@ def acoesFiltradas():
 
     
     return array
+
+
+def acoesFiltro(codigo):
+    
+    msft = yf.Tickers(codigo)
+    acao = namedtuple('Acao', ['codigo', 'nome', 'info', 'preco', 'moeda'])
+    
+    info = msft.tickers[codigo].info
+    infoBasic = msft.tickers[codigo].fast_info
+    
+    dado = acao(codigo.translate(str.maketrans('','','.')), info['longName'], info['longBusinessSummary'],round(infoBasic['last_price'], 2) , infoBasic['currency'])
+        #return render(request ,'acoes/teste.html', {'teste' : msft.tickers['BBDC4.SA'].info})
+    return dado

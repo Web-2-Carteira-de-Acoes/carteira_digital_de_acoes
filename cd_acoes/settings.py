@@ -52,6 +52,8 @@ INSTALLED_APPS = [
 
     # App Interno para o Ação
     'acoes',
+    
+    'carteira_acoes'
 ]
 
 MIDDLEWARE = [
