@@ -27,13 +27,15 @@
 </head>
 
 <body id="page-top">
-
+    {% if user.is_authenticated %}
+      
+      
+       
     <!-- Page Wrapper -->
     <div id="wrapper">
 
         <!-- Sidebar -->
         <ul class="navbar-nav text-dark sidebar accordion" id="accordionSidebar">
-
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Dashboard">
                 <div class="sidebar-brand-icon rotate-n-15">
@@ -392,7 +394,11 @@
     <!-- Page level custom scripts -->
     <script src={% static "js/demo/chart-area-demo.js" %}></script>
     <script src={% static "js/demo/chart-pie-demo.js" %}></script>
-
+    {% endif %}
+    <H1> VOCE NAO POSSSUI ACESSO A ESTA PAGINA POR FAVOR EFETUAR O LOGIN PARA ACESSAR
+        <a href="{% url 'accounts:user_login' %}">Fazer Login</a>
+        <a href="{% url 'accounts:home' %}">Cadastrar</a>
+    </H1>
 </body>
 
 </html>

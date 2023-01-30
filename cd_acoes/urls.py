@@ -39,16 +39,16 @@ urlpatterns = [
     path('edicaodacarteira', TemplateView.as_view(template_name="layout/carteiras/edicaodacarteira.html")),
     path('relatorios', TemplateView.as_view(template_name="layout/relatorios/relatorios.html")),
     path('relatoriosespecificos', TemplateView.as_view(template_name="layout/relatorios/relatoriosespecificos.html")),
-    path('cadastro', TemplateView.as_view(template_name="layout/formularios/cadastro.html")),
+   # path('cadastro', TemplateView.as_view(template_name="layout/formularios/cadastro.html")),
     path('configuracoesdeusuario', TemplateView.as_view(template_name="layout/config.usuarios/configuracoesdeusuario.html")),
 
    
    
 #icaro
-    path('usuarios/', include('usuarios.urls')),
+    path('', include('usuarios.urls')),
     path('acoes/', include('acoes.urls')),
     path('carteiras/', include('carteiras.urls')),
-    path('login/', include('usuarios.urls')),
+    #path('login/', include('usuarios.urls')),
 
 
 
