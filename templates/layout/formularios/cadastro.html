@@ -30,12 +30,13 @@
     
     
     <form  method="post" action="cadastrar">
+        {% csrf_token %}
         {% if msg %}
         <div class="alert {{class}}">
             {{msg}}
         </div>
         {% endif %}
-    {% csrf_token %}
+    
     <body style="background-color:  #E7F5F5; height: inherit;">
 
         <div class="container py-5 h-100">
