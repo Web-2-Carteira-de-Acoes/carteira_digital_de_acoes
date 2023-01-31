@@ -4,25 +4,45 @@ from .forms import AcoesForm
 import yfinance as yf
 from pprint import pprint
 from inspect import getmembers
+from .acoes import *
 
 
 
 
 def list_acoes(request):
-    acoes = Acoes.objects.all()
-    return render(request, 'acoes/teste1.html', {'lista': acoes})
+   
+    if request.method == "POST":
+        
+        acoes = Acoes.objects.filter(codigo=request.POST.get('codigoAcao')+'SA')
+        if acoes:
+            
+            return render(request, '../templates/layout/acoes/acoes.html', {'lista': acoes[0], 'tipo':'busca'})    
+        
+        dados = acoesFiltro(request.POST.get('codigoAcao')+'.SA')
+        find_or_create_acao(dados)            
+        return render(request, '../templates/layout/acoes/acoes.html', {'lista': dados , 'tipo': 'busca'})
+            
+    acoes = Acoes.objects.all
+    
+    return render(request, '../templates/layout/acoes/acoes.html', {'lista' : acoes, 'tipo': 'all'})
 
 
 def create_acoe(request):
-    form = AcoesForm(request.POST or None)
-
+    
+    form = AcoesForm(request.POST)
     if form.is_valid():
         form.save()
-        print(request)
-        return redirect('list_acoes')
+        return redirect('list_acoes', {'form': form})
+    else:
+        return render(request, 'acoes-form.html', {'form': 'Deu erro, não inseriu'})
 
-    return render(request, 'acoes-form.html', {'form': form})
 
+def find_or_create_acao(dados):
+    
+    #form = AcoesForm({  'nome': '2dasdadasd', 'preco':'20.4', 'info': 'tesasdasdasdaste', 'codigo': 'https://shopee.com.b', 'moeda': 'venezu22222222éla'})
+    form = AcoesForm({'nome': dados.nome , 'preco': dados.preco, 'info': dados.info, 'codigo': dados.codigo, 'moeda': dados.moeda})
+    if form.is_valid():
+        form.save()
 
 def update_acoe(request, id):
     acao = Acoes.objects.get(id=id)
@@ -47,21 +67,31 @@ def delete_acoe(request, id):
 
 
 
-def buscar_acao(request):
-    teste = yf.Ticker("BBDC4.SA")
+#def buscar_acao(request):
+    #tickers = yf.Tickers('msft, aapl, goog, ITSA4.SA, BBDC4.SA')
+    #tickers = yf.Tickers('aapl')
+    texto = "MSFT BBDC4.SA"
+    msft = yf.Tickers(texto)
+
     form = AcoesForm()
     
     
-    if request.method == "GET":
+   # if request.method == "GET":
     
+    teste = traserAcoes(False,False,False)
+    teste2 = acoesFiltradas()
     
-        return render(request ,'acoes/teste.html', {'teste': teste.info})
+     
 
-    else:
-        form = AcoesForm(request.POST)
-        if form.is_valid():
-            acao = form.save()
-            form = AcoesForm()
+    return render(request ,'acoes/teste.html', {'teste' : teste2 })
+    #return render(request ,'acoes/teste.html', {'teste' : msft.tickers['BBDC4.SA'].info})
+    #return render(request ,'acoes/teste.html', {'teste' : msft.tickers})
+
+    #else:
+    #    form = AcoesForm(request.POST)
+     #   if form.is_valid():
+     #       acao = form.save()
+     #       form = AcoesForm()
             
-        else:
-            return render(request ,'acoes/teste.html', {'teste': 'deu ruim'})
+      #  else:
+      #      return render(request ,'acoes/teste.html', {'teste': 'deu ruim'})

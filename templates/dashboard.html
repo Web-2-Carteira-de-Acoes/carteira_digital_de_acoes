@@ -4,7 +4,13 @@
 {% block css %}
 <link href={% static "css/styles_layout.css" %} rel="stylesheet">
 {% endblock %}
+
 {% block content %}
+<p>{{ user.get_full_name|default:user.username }}
+    usuario logado falta colocar no lugar
+    e logout colocar no lugar 
+    <a href="{% url 'accounts:user_logout' %}">Fazer Logout</a>
+</p>
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -19,10 +25,10 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
 
         <div class="row">
-        <a class="btn btn-primary m-2" role="button" href="Tela_Inicial">Ir para carteiras</a>
+        <a class="btn btn-primary m-2" role="button" href="tela_inicial">Ir para carteiras</a>
 
         <a class="btn btn-primary m-2" role="button" href="cadastro">ir para tela de cadastro</a>
-        <a class="btn btn-primary m-2" role="button" href="Login">Login</a>
+        <a class="btn btn-primary m-2" role="button" href="login">Login</a>
 
         </div>
     </div>

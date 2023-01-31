@@ -52,6 +52,8 @@ INSTALLED_APPS = [
 
     # App Interno para o Ação
     'acoes',
+    
+    'carteira_acoes'
 ]
 
 MIDDLEWARE = [
@@ -142,6 +144,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'usuarios.backends.EmailOrUsernameBackend',
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
