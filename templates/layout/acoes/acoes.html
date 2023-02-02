@@ -22,31 +22,45 @@
     <div class="row">
 
         <!-- Area Chart -->
-        <div class="col-xl-12 col-lg-7">
-            <div class="card shadow mb-4">
+        <div class="col-xl-12 col-lg-10">
+            <div class="card shadow mb-4" >
                 
             </div>
         </div>
 
     </div>
 
-    <div class="row">
-        <div class="col-lg-12 mb-4"> 
+
+
+    
+
+    
+
+    <div class="row col-lg-10 col-md-12 col-md-12">
+        <div class="p-3 
+        border-bottom-secondary 
+        bg-light 
+        rounded 
+        text-lg-h2 
+        text-md-h33
+        text-md-h10"> 
+
             <form action="" method="POST">
                 {% csrf_token %}
                 {{form.as_p}}
-                <input class="me-1 mb-2 w-auto" type="text" value="" placeholder="Buscar ações" name="codigoAcao" id="buscar_acao">
-                <input class="me-1 mb-2 w-auto" type="submit" value="enviar" name="buscar_acao" >
+                <input class=" mt-sm-2 m-md-3 m-lg-0 mt-lg-1 mb-2 p-lg-2" style="width: 380px;" type="text" value="" placeholder="Buscar ações" name="codigoAcao" id="buscar_acao">
+                <input class="btn btn-outline-info btn-lg mt-sm-2 m-md-3 m-lg-0 mt-lg-1 mb-2 p-lg-2"  type="submit" value="Buscar" name="buscar_acao" style="">
             </form>
         </div>
+    
 
     </div>
 
     <!-- Content Row -->
-    <div class="row">
+    <div class="row " >
 
         <!-- Content Column -->
-        <div class="col-lg-12 mb-4">
+        <div class="col-lg-12 mb-5">
             <!-- Color System -->
             <div class="row">
 
