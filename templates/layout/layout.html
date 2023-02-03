@@ -74,11 +74,11 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="listar_acoes">Listar Ações</a>
+                       
                         <a class="collapse-item" href="tela_inicial">Tela Inicial</a>
                         <a class="collapse-item" href="edicaodacarteira">Editar carteira</a> 
                         <a class="collapse-item" href="telainicial2">Adicionar nova carteira</a> 
-                        <a class="collapse-item" href="infos_acoes">Informaçẽos Sobre as Ações</a>
+                        
                     </div>
                 </div>
             </li>
@@ -107,6 +107,45 @@
                     </div>
                 </div>
             </li>
+
+
+ <!-- Divider -->
+ <hr class="sidebar-divider">
+
+ <!-- Heading -->
+ <div class="sidebar-heading">
+     AÇÕES
+ </div>
+
+ <!-- Nav Item - Pages Collapse Menu -->
+ <li class="nav-item">
+     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseone"
+         aria-expanded="true" aria-controls="collapsePages">
+         <i class="fas fa-fw fa-folder"></i>
+         <span>Minhas ações</span>
+     </a>
+     <div id="collapseone" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+         <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="infos_acoes">Informaçẽos Sobre as Ações</a>
+             <a class="collapse-item" href="listar_acoes">Listar Ações</a>
+            
+       
+             
+         </div>
+     </div>
+ </li>
+
+
+
+
+
+
+
+
+
+
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -288,7 +327,8 @@
     <script src={% static "js/demo/chart-area-demo.js" %}></script>
     <script src={% static "js/demo/chart-pie-demo.js" %}></script>
     {% endif %}
-  <!-- <H1> VOCE NAO POSSSUI ACESSO A ESTA PAGINA POR FAVOR EFETUAR O LOGIN PARA ACESSAR
+
+    <H1>  VOCE NAO POSSSUI ACESSO A ESTA PAGINA POR FAVOR EFETUAR O LOGIN PARA ACESSAR
         <a href="{% url 'accounts:user_login' %}">Fazer Login</a>
         <a href="{% url 'accounts:home' %}">Cadastrar</a>--> 
     </H1>
