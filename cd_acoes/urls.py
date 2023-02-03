@@ -21,6 +21,7 @@ from . import view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', view.dashboard),
     path('dashboard', TemplateView.as_view(template_name="dashboard.html"), name='dashboard'),
     
 #ana

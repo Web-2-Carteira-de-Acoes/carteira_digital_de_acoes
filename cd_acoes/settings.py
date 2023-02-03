@@ -177,3 +177,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 django_on_heroku.settings(locals())
+
+
+# Configurações de Login
+# LOGIN_REDIRECT_URL = 'dashboard'
+# LOGOUT_REDIRECT_URL = 'login'
+# LOGIN_URL = 'login'
+# SESSION_EXPIRE_SECONDS = 3600
+# SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True

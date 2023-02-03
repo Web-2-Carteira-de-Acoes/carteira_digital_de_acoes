@@ -40,7 +40,7 @@ def home(request):
             user.save()
             data['msg'] = 'usuario cadastrado'
             data['class'] = 'alert alert-success'
-            return render(request,'../templates/layout/formularios/cadastro.html',data)
+            return render(request,'../templates/layout/formularios/login.html',data)
     else:
         return render(request, template_name, data)
 
