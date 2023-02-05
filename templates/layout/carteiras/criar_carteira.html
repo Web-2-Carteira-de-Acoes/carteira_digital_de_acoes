@@ -1,0 +1,70 @@
+
+{% extends 'layout/layout.html' %}
+{%load static %}
+{% block title %}Criar Carteira{% endblock %}
+{% block css %}
+<link href={% static "/css/styles_layout.css" %} rel="stylesheet">
+{% endblock %}
+{% block content %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <div class="overflow-hiden m-5">
+        <div class="row justify-content-around">
+
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="p-3 
+                border-bottom-secondary 
+                bg-light 
+                rounded 
+                text-lg-h2 
+                text-md-h33
+                text-sm-h5" style="color: blue;">Escolha as ações para essa carteira</div>
+            </div>
+
+           
+
+            </div>
+            <!--
+                Já que tem o botão salvar ao fim do formulário há necessidade deste botão no início?
+                <div class="col">
+                <button type="button" class="btn btn-success">Adicionar ações à carteira</button>
+            </div>
+            -->
+
+        </div>
+    
+        <form action="" method="post" class="p-0 m-0 mt-lg-3">
+            {% csrf_token %}
+            
+            <!--d-flex flex-column justify-content-center align-items-center-->
+            <ul class="list-group">
+                <li class="row justify-content-around list-group-item pl-4 pt-2 m-0 mb-2 pb-2 bd-highlight rounded" style="height: fit-content; background-color: rgba(37, 37, 37, 0.08);">
+                    
+                    <!--Campos que devem ser preenchidos pela biblioteca que trará os dados das ações-->
+                    <div>
+                        <label class="form-check-label flex-fill mb-2 ps-4 col-sm-12 col-md-8 col-lg-7 col-xl-8 offset-xl-1" for="acao1">Digite o nome da carteira:</label>
+                        <input class="form-check-input me-1 mb-2 col-sm-1 col-md-1 col-lg-1 col-xl-1 order-first" type="text" value="" name="nome">
+                        <input  type="hidden" value="{{user.id}}" name="usuario_id" id="usuario_id">
+                    
+                    </div>
+                </li>
+            </ul>
+
+            <div class="d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-success mt-3">Salvar</button>
+            </div>
+
+        </form>            
+                
+    
+
+    </div>
+
+
+
+</div>
+
+
+
+{% endblock %}
