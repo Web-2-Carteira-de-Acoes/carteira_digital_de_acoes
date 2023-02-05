@@ -44,8 +44,6 @@ def home(request):
     else:
         return render(request, template_name, data)
 
-##############################################################
-
 def user_login(request):
     template_name = '../templates/layout/formularios/login.html'
     if request.method == 'POST':
@@ -54,7 +52,7 @@ def user_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('accounts:user_profile')
+            return redirect('../dashboard')
         else:
             data = {}
             data['msg'] = 'digite uma usuario valido'
@@ -63,11 +61,6 @@ def user_login(request):
 
     return render(request, template_name, {})
 
-
-@login_required(login_url='/login/')
-def user_profile(request):
-    template_name = '../templates/dashboard.html'
-    return render(request, template_name, {})
 
 
 @login_required(login_url='/login/')

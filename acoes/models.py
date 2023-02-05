@@ -9,5 +9,7 @@ class Acoes(models.Model):
     codigo = models.CharField(max_length=200) 
     moeda = models.CharField(max_length=200) 
     
+   
+    
     def __str__(self):
-        return self.id, self.nome
+        return f'{self.id} {self.nome} '
