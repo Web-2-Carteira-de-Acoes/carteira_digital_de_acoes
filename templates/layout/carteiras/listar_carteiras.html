@@ -1,0 +1,83 @@
+
+{% extends 'layout/layout.html' %}
+{%load static %}
+{% block title %}telainicial2{% endblock %}
+{% block css %}
+<link href={% static "css/styles_layout.css" %} rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+
+<link href={% static "css/styles_layout.css" %} rel="stylesheet">
+
+
+
+<div class="mb-2">   
+
+    <p class="col-2" id="textBotaoPrimCart" style="background: #ccc; color: #000000; margin-left: 2em; "  >
+        Adicionar nova carteira
+        <a class="btn btn-outline btn-custom " style="background: #ccc; margin-left: 5em;" role="button" href="{% url 'create_carteira'%}">
+            <svg class="bi bi-plus-circle container d-flex" fill="#05FF00" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="text-shadow: 6px 7px 5px #6565658f; bg-#ccc">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+        </a>
+    </p>
+    
+    
+
+    {% for carteirinha in carteira %}
+    
+   
+    <form action="{% url 'delete_carteira' carteirinha.id %}" method="post">
+        {% csrf_token %}
+   
+    <div class="container-fluid">
+    
+        <div class="container py-5 h-20">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="col-12">
+                    <div class="card card-body-custom " >
+                        <div class="card-body p-1 ps-2 pe-3 text-center" style="height: fit-content; width: 100%; background-color: rgba(37, 37, 37, 0.08);" >    
+                            <div class="mt-2">
+                                <div class="form-inline form-black mb-2">
+                                    <i class="col-4 bi bi-wallet2" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="100" padding ="60"  fill="#05FF00" class="bi bi-wallet2 rotate-n-15" viewBox="0 0 16 16">
+                                            <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                                        </svg>
+                                    </i>
+
+                                    <p class="mb-2" style="color: #000000; margin-right: 5em;margin-left:100px;"> {{carteirinha.nome}}</p>
+    
+        <br>
+
+
+        <form action="{% url 'delete_carteira' carteirinha.id %}" method="post">
+            {% csrf_token %}
+
+        <div class="mb-2">
+            <input  type="hidden" value="{{user.id}}" name="usuario_id" id="usuario_id" >
+            
+            <input type="submit" value="Apagar" name="apagar">
+        </div>
+
+        
+        </div>
+    </form>
+    </div>
+</form>
+
+    
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+
+
+
+{% endblock %}

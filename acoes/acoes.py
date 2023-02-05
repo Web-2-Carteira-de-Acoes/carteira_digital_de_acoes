@@ -42,7 +42,7 @@ def acoesFiltro(codigo):
     
     msft = yf.Tickers(codigo)
     acao = namedtuple('Acao', ['codigo', 'nome', 'info', 'preco', 'moeda'])
-    
+    codig=codigo
     info = msft.tickers[codigo].info
     infoBasic = msft.tickers[codigo].fast_info
     
