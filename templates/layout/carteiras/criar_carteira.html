@@ -6,6 +6,10 @@
 <link href={% static "/css/styles_layout.css" %} rel="stylesheet">
 {% endblock %}
 {% block content %}
+
+
+
+
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -13,16 +17,13 @@
         <div class="row justify-content-around">
 
             <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="p-3 
-                border-bottom-secondary 
+                <div class="p-3
                 bg-light 
-                rounded 
-                text-lg-h2 
-                text-md-h33
-                text-sm-h5" style="color: blue;">Escolha as ações para essa carteira</div>
+             
+             " style="color: blue;  text-align: center; font-size: 14px;">ESCOLHA AS AÇÕES PARA ESSA CARTEIRA</div>
             </div>
 
-           
+        </div>
 
             </div>
             <!--
@@ -34,25 +35,25 @@
 
         </div>
     
-        <form action="" method="post" class="p-0 m-0 mt-lg-3">
+        <form action="" method="post" class="p-0 m-0 mt-lg-3 m-lg-5">
             {% csrf_token %}
             
             <!--d-flex flex-column justify-content-center align-items-center-->
             <ul class="list-group">
-                <li class="row justify-content-around list-group-item pl-4 pt-2 m-0 mb-2 pb-2 bd-highlight rounded" style="height: fit-content; background-color: rgba(37, 37, 37, 0.08);">
+                <li class="row justify-content-around list-group-item pl-2 pt-2 m-0 mb-2 pb-2 bd-highlight rounded   bg-light border-bottom-secondary" style="height: fit-content; background-color: rgba(37, 37, 37, 0.08); width: 1200px; ">
                     
                     <!--Campos que devem ser preenchidos pela biblioteca que trará os dados das ações-->
                     <div>
-                        <label class="form-check-label flex-fill mb-2 ps-4 col-sm-12 col-md-8 col-lg-7 col-xl-8 offset-xl-1" for="acao1">Digite o nome da carteira:</label>
-                        <input class="form-check-input me-1 mb-2 col-sm-1 col-md-1 col-lg-1 col-xl-1 order-first" type="text" value="" name="nome">
+                        <label class="form-check-label flex-fill mb-2 ps-3 col-md-8 col-md-5 col-lg-5 col-xl-5 offset-xl-1 border-bottom-bg-secondary" for="acao1">DIGITE O NOME DA CARTEIRA:</label>
+                        <input class="form-check-input me-1 mb-4 col-sm-1 col-md-4 col-lg-1 col-xl-1 order-first"  style="width: 100px; margin-right: 100px;"  type="text" value="" name="nome">
                         <input  type="hidden" value="{{user.id}}" name="usuario_id" id="usuario_id">
                     
                     </div>
                 </li>
             </ul>
 
-            <div class="d-md-flex justify-content-md-end">
-                <button type="submit" class="btn btn-success mt-3">Salvar</button>
+            <div class="d-md-flex justify-content-md-end" ">
+                <button type="submit" class="btn btn-success mt-3 m-lg-3">Salvar</button>
             </div>
 
         </form>            
