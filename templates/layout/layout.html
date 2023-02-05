@@ -67,20 +67,11 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="{% url 'list_carteiras'%}" >
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Minhas carteiras</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                       
-                        <a class="collapse-item" href="tela_inicial">Tela Inicial</a>
-                        <a class="collapse-item" href="edicaodacarteira">Editar carteira</a> 
-                        <a class="collapse-item" href="telainicial2">Adicionar nova carteira</a> 
-                        
-                    </div>
-                </div>
+                
             </li>
             
             <!-- Divider -->
@@ -127,7 +118,7 @@
      <div id="collapseone" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
          <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="infos_acoes">Informaçẽos Sobre as Ações</a>
-             <a class="collapse-item" href="listar_acoes">Listar Ações</a>
+             <a class="collapse-item" href="{%url 'list_acoes'%}">Listar Ações</a>
             
        
              

@@ -67,4 +67,4 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     messages.success(request, 'Você saiu do sistema.')
-    return redirect('accounts:home')
+    return redirect('accounts:user_login')

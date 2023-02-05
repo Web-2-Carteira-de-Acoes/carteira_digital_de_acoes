@@ -8,12 +8,14 @@ from acoes.views import find_or_create_acao
 
 
 
-def list_carteiras(request, usuario_id):
-    carteiras = Carteira.objects.get(usuario_id)
+def list_carteiras(request):
+    user = request.user
+    
+    carteiras = Carteira.objects.filter(usuario_id=user.id)
     
     if carteiras:
-        return render(request, '../templates/layout/carteiras/listar_carteiras.html', {'carteiras': carteiras})
-    return render(request, '../templates/layout/carteiras/listar_carteiras.html', {'carteiras': carteiras})
+        return render(request, '../templates/layout/carteiras/listar_carteiras.html', {'carteira': carteiras})
+    return render(request, '../templates/layout/carteiras/listar_carteiras.html', {'carteira': carteiras})
 
 
 
