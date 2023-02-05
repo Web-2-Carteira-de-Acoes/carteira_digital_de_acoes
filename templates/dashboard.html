@@ -6,45 +6,31 @@
 {% endblock %}
 
 {% block content %}
-<p>{{ user.get_full_name|default:user.username }}
-    usuario logado falta colocar no lugar
-    e logout colocar no lugar 
-    <a href="{% url 'accounts:user_logout' %}">Fazer Logout</a>
-</p>
+
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
     <!-- Page Heading -->
     
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <!--  <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-    </div>
+    </div>--> 
 
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-
-        <div class="row">
-        <a class="btn btn-primary m-2" role="button" href="tela_inicial">Ir para carteiras</a>
-
-        <a class="btn btn-primary m-2" role="button" href="cadastro">ir para tela de cadastro</a>
-        <a class="btn btn-primary m-2" role="button" href="login">Login</a>
-
-        </div>
-    </div>
-
+   
     <!-- Content Row -->
-    <div class="row">
+    <div class="row" style="margin-top: 70px;">
 
         <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
+        <div class="col-xl-3 col-md-6 mb-4" >
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Earnings (Monthly)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                Registre o dia que adquiriu uma nova ação</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -61,8 +47,8 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Earnings (Annual)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                Registre os seus ganhos</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -78,7 +64,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Registre a porcentagem de ganhos e perdas
                             </div>
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
@@ -108,8 +94,8 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Pending Requests</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                procure adquirir conhecimentos através de conversas com outros investidores.</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -198,14 +184,14 @@
         </div>
     </div>
 
-    <!-- Content Row -->
-    <div class="row">
+    <!-- Content Row 
+    <div class="row">-->
 
-        <!-- Content Column -->
-        <div class="col-lg-6 mb-4">
+        <!-- Content Column 
+        <div class="col-lg-6 mb-4">-->
 
             <!-- Project Card Example -->
-            <div class="card shadow mb-4">
+          <!-- <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
                 </div>
@@ -241,110 +227,44 @@
                             aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
-            </div>
+            </div>--> 
 
-            <!-- Color System -->
+           
             <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-primary text-white shadow">
-                        <div class="card-body">
-                            Primary
-                            <div class="text-white-50 small">#4e73df</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-success text-white shadow">
-                        <div class="card-body">
-                            Success
-                            <div class="text-white-50 small">#1cc88a</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-info text-white shadow">
-                        <div class="card-body">
-                            Info
-                            <div class="text-white-50 small">#36b9cc</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-warning text-white shadow">
-                        <div class="card-body">
-                            Warning
-                            <div class="text-white-50 small">#f6c23e</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-danger text-white shadow">
-                        <div class="card-body">
-                            Danger
-                            <div class="text-white-50 small">#e74a3b</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-secondary text-white shadow">
-                        <div class="card-body">
-                            Secondary
-                            <div class="text-white-50 small">#858796</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-light text-black shadow">
-                        <div class="card-body">
-                            Light
-                            <div class="text-black-50 small">#f8f9fc</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-dark text-white shadow">
-                        <div class="card-body">
-                            Dark
-                            <div class="text-white-50 small">#5a5c69</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
         <div class="col-lg-6 mb-4">
 
             <!-- Illustrations -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">INVISTA EM AÇÕES</h6>
                 </div>
                 <div class="card-body">
                     <div class="text-center">
                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                            src={% static "img/undraw_posting_photo.svg" %} alt="...">
+                            src={% static "img/bolsa.png" %} alt="...">
                     </div>
-                    <p>Add some quality, svg illustrations to your project courtesy of <a
-                            target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                        constantly updated collection of beautiful svg images that you can use
-                        completely free and without attribution!</p>
-                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
-                        unDraw &rarr;</a>
+                    <p class="mb-2" style="color: blue; font-weight: bold; font-size: 15px;">VANTAGENS DE INVESTIR:<p>
+                           
+                    <p> -A renda fixa só atende parte do que você precisa;</p>
+                    <p> -Você ganha duas vezes com as ações;</p>
+                   <p> -Protege seus investimentos com as ações;<p>
+                 <p>   -Investe em empresas, não em dívidas;<p>
+                  <p>  -Boa liquidez com as ações.<p>
+
                 </div>
             </div>
 
             <!-- Approach -->
-            <div class="card shadow mb-4">
+           
+            <div class="card shadow mb-2" style="display: flex;">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Ibovespa fica na frente das bolsas em 2022</h6>
                 </div>
                 <div class="card-body">
-                    <p>Carteia digital de ações makes extensive use of Bootstrap 4 utility classes in order to reduce
-                        CSS bloat and poor page performance. Custom CSS classes are used to create
-                        custom components and custom utility classes.</p>
-                    <p class="mb-0">Before working with this theme, you should become familiar with the
-                        Bootstrap framework, especially the utility classes.</p>
+                    <p>O Ibovespa encerrou esta quinta-feira (29), dia do último pregão de 2022, aos 109.734,60 pontos com uma alta anual de 4,69%.
+                         Aos trancos e barrancos, o índice de referências da bolsa brasileira conseguiu arrancar um desempenho positivo em um ano marcado por guerra, boom de commodities, 
+                        novos lockdowns na China, pressão inflacionária e alta das taxas de juros globais, além de eleições presidenciais no Brasil.</p>
+                    <p class="mb-0">Se comparado ao rendimento da renda fixa local, o desempenho não é de brilhar os olhos..</p>
                 </div>
             </div>
 

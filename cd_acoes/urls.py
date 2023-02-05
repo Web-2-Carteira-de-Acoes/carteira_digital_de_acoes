@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.urls import path, include
 from . import view
+from .views.relatorio_acao import relatorio_especifico, relatorio_geral
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', view.dashboard, name='tela_dashboard'),
     path('dashboard', TemplateView.as_view(template_name="dashboard.html"), name='dashboard'),
     
 #ana
@@ -30,9 +32,7 @@ urlpatterns = [
     path('listar_acoes', TemplateView.as_view(template_name="layout/acoes/acoes.html")),
     path('criar_carteira', TemplateView.as_view(template_name="layout/carteiras/criar_carteira.html")),
     path('infos_acoes', TemplateView.as_view(template_name="layout/acoes/informacoes_sobre_as_acoes.html")),
-    path('relatorio_geral', TemplateView.as_view(template_name="layout/relatorios/relatorio_geral.html")),
-    path('relatorio_especifico_carteira', TemplateView.as_view(template_name="layout/relatorios/relatorios_especificos_carteira.html")),
-
+  
 
 #samara
     path('telainicial2', TemplateView.as_view(template_name="layout/telas_iniciais/telainicial2.html")),
@@ -49,6 +49,8 @@ urlpatterns = [
     path('acoes/', include('acoes.urls')),
     path('carteiras/', include('carteiras.urls')),
     #path('login/', include('usuarios.urls')),
+    path('relatorio_geral', relatorio_geral.relatorio_geral, name='relatorio_geral'),
+    path('relatorio_especifico_carteira', relatorio_especifico.relatorio_especifico, name='relatorio_especifico_carteira'),
 
 
 

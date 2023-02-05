@@ -37,7 +37,7 @@
         <!-- Sidebar -->
         <ul class="navbar-nav text-dark sidebar accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Dashboard">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href={% url "dashboard"%}>
                 <div class="sidebar-brand-icon rotate-n-15">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
                         <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
@@ -74,11 +74,11 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="Listar_Acoes">Listar Ações</a>
-                        <a class="collapse-item" href="Tela_Inicial">Tela Inicial</a>
+                       
+                        <a class="collapse-item" href="tela_inicial">Tela Inicial</a>
                         <a class="collapse-item" href="edicaodacarteira">Editar carteira</a> 
                         <a class="collapse-item" href="telainicial2">Adicionar nova carteira</a> 
-                        <a class="collapse-item" href="Infos_Acoes">Informaçẽos Sobre as Ações</a>
+                        
                     </div>
                 </div>
             </li>
@@ -100,14 +100,52 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="Relatorio_Geral">Relatório Geral</a>
-                        <a class="collapse-item" href="Relatorio_Especifico_Carteira">Relatório Específico</a>
+                        <a class="collapse-item" href="relatorio_geral">Relatório Geral</a>
+                        <a class="collapse-item" href="relatorio_especifico_carteira">Relatório Específico</a>
                         <a class="collapse-item" href="#">Relatório de Ações</a>
-                        <a class="collapse-item" href="#">Gráficos</a>
-                        <a class="collapse-item" href="#">Tabelas</a>
+                        
                     </div>
                 </div>
             </li>
+
+
+ <!-- Divider -->
+ <hr class="sidebar-divider">
+
+ <!-- Heading -->
+ <div class="sidebar-heading">
+     AÇÕES
+ </div>
+
+ <!-- Nav Item - Pages Collapse Menu -->
+ <li class="nav-item">
+     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseone"
+         aria-expanded="true" aria-controls="collapsePages">
+         <i class="fas fa-fw fa-folder"></i>
+         <span>Minhas ações</span>
+     </a>
+     <div id="collapseone" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+         <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="infos_acoes">Informaçẽos Sobre as Ações</a>
+             <a class="collapse-item" href="listar_acoes">Listar Ações</a>
+            
+       
+             
+         </div>
+     </div>
+ </li>
+
+
+
+
+
+
+
+
+
+
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -137,7 +175,7 @@
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                  <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
@@ -158,140 +196,31 @@
                                         <input type="text" class="form-control bg-light border-0 small"
                                             placeholder="Search for..." aria-label="Search"
                                             aria-describedby="basic-addon2">
+
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
                                             </button>
                                         </div>
+
                                     </div>
                                 </form>
                             </div>
                         </li>
 
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src={% static "img/undraw_profile_1.svg" %}
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src={% static "img/undraw_profile_2.svg" %}
-                                            alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src={% static "img/undraw_profile_3.svg" %}
-                                            alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                      
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuário</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">  <p class="mr-2" style="color: #0000ff;margin-bottom: -6px;text-decoration: underline;">{{ user.get_full_name|default:user.username }}
+                                    logado
+                
+                                </p></span>
+                              
+
+
                                 <img class="img-profile rounded-circle"
                                     src={% static "img/undraw_profile.svg" %}>
                             </a>
@@ -310,11 +239,14 @@
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Log de Atividade
                                 </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Sair
+                              <div class="dropdown-divider"></div>
+
+                             <!--   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"-->
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <a href="{% url 'accounts:user_logout' %}"> Sair
                                 </a>
+                                    
+                                    
                             </div>
                         </li>
 
@@ -361,7 +293,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Deseja sair?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -394,11 +326,33 @@
     <!-- Page level custom scripts -->
     <script src={% static "js/demo/chart-area-demo.js" %}></script>
     <script src={% static "js/demo/chart-pie-demo.js" %}></script>
+    {% else %}
+
+   <div class="container py-5 h-100">
+        <div class="d-flex justify-content-center align-items-center h-150">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card cardlogin text-black" style="border-radius: 4rem; background-image: linear-gradient(0.59deg, #64C9FF 0.51%, rgba(71, 236, 255, 0.21) 97.67%);;">
+                    <div class="card-body p-3 ps-3 pe-3 text-center" style="height: 300px; ">
+    
+                        <div class="mt-md-4">
+                            <p class="mt-3" style="background: white; color: blue; font-size: 22px; border-radius:18px;">  Você não possui acesso ao sistema, por favor efetuar o login para acessar </p>
+                                <a href="{% url 'accounts:user_login' %}"><p class="mb-4" style="background: #0033ff;color: white; width: 140px; margin-left:130px;border-radius: 13px;font-size: 21px;  margin-bottom: 70px; ">Fazer Login<p></a>
+                                <a href="{% url 'accounts:cadastrar_usuario' %}"><pclass="mb-2" style="background: #0033ff;color: white; width: 181px; border-radius: 13px; font-size: 21px;">Cadastrar<p></a>
+                           
+
+    
+                        </div>
+    
+                        <div>
+                           
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     {% endif %}
-    <H1> VOCE NAO POSSSUI ACESSO A ESTA PAGINA POR FAVOR EFETUAR O LOGIN PARA ACESSAR
-        <a href="{% url 'accounts:user_login' %}">Fazer Login</a>
-        <a href="{% url 'accounts:home' %}">Cadastrar</a>
-    </H1>
 </body>
 
 </html>

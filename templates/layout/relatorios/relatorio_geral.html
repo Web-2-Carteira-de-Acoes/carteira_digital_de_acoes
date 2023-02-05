@@ -19,7 +19,7 @@
             rounded 
             text-lg-h2 
             text-md-h33
-            text-sm-h5" style="color: blue;">Relatório Geral</div>
+            text-sm-h5" style="color: blue;">{{menssagem}}</div>
         </div>
 
         <!-- Botão Gerar PDF -->
@@ -38,7 +38,7 @@
     </div>
 
     <div class="w-100">
-        <div class="row ml-5 mr-5 p-3">
+        {% comment %} <div class="row ml-5 mr-5 p-3">
             <!-- Gráfico -->
             <div class="col-12">
                 <div class="card shadow mb-4">
@@ -75,6 +75,41 @@
                             <canvas id="myAreaChart"></canvas>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div> {% endcomment %}
+
+        <div class="row ml-5 mr-5 p-3">
+            <!-- Gráfico -->
+            <div class="col-12">
+                <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 mb-2 d-flex flex-row align-items-center justify-content-between">
+                        
+                        <h6 class="m-0 font-weight-bold text-primary">Oscilação de Mercado</h6>
+                        
+                        <div class="dropdown no-arrow">
+                            {{dados|safe}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row ml-5 mr-5 p-3">
+            <!-- Gráfico -->
+            <div class="col-12">
+                <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 mb-2 d-flex flex-row align-items-center justify-content-between">
+                        
+                        <h6 class="m-0 font-weight-bold text-primary">Oscilação de Mercado</h6>
+                        
+                        <div class="dropdown no-arrow">
+                            {{relatorio|safe}}
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
