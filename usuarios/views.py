@@ -40,7 +40,7 @@ def home(request):
             user.save()
             data['msg'] = 'usuario cadastrado'
             data['class'] = 'alert alert-success'
-            return render(request,'../templates/layout/formularios/cadastro.html',data)
+            return render(request,'../templates/layout/formularios/login.html',data)
     else:
         return render(request, template_name, data)
 
@@ -74,4 +74,5 @@ def user_profile(request):
 def user_logout(request):
     logout(request)
     messages.success(request, 'Você saiu do sistema.')
-    return redirect('accounts:home')
+    # return redirect('accounts:home')
+    return redirect('/login')
