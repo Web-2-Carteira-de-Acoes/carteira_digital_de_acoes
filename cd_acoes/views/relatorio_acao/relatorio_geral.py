@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView
 from django.shortcuts import render
 import plotly.graph_objects as go
+import yfinance as yf
 
 def index(request):
     # return render(request, 'indexTest.html')
@@ -11,10 +12,18 @@ def index(request):
 
 def relatorio_geral(request):
     # return render(request, 'indexTest.html')
+
+    nome_da_acao = "LMT"
     
-    menssagem = """Relatório Geral"""
+    menssagem = "Relatório Geral"+ nome_da_acao
 
+    acao = yf.Ticker(nome_da_acao)
 
+    dados1 = acao.history(period="6mo")
+    dados1 = dados1['Close']
+    # dados1.columns = ['Coluna_1', 'Coluna_2']
+    # dados1.drop(2)
+    print(dados1)
     figura = go.Figure()
 
     # figura.add_bar(
@@ -27,12 +36,8 @@ def relatorio_geral(request):
     #     name='num de inscritos')
 
     figura.add_scatter(
-        x=['2010', '2011', '2012', '2013', '2014', '2015',
-            '2016', '2017', '2018', '2019', '2020', '2021'],
-        y=[4626094, 5380857,  5791332, 7173574,
-            8722290, 7792025,  8627371,	6731186,
-            5513662, 5095308, 5783357, 4004764
-            ],
+        x=dados1.index,
+        y=dados1,
         name='num de inscritos')
 
     figura.update_layout(
@@ -49,8 +54,10 @@ def relatorio_geral(request):
     )
 
     relatorio = figura.to_html()
+    # dados = dados1.to_html()
 
     context = {
+        # 'dados': dados,
         'menssagem': menssagem,
         'relatorio': relatorio
     }
