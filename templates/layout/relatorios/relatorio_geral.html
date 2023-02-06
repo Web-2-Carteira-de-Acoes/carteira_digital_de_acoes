@@ -86,16 +86,17 @@
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 mb-2 d-flex flex-row align-items-center justify-content-between">
                         
-                        <h6 class="m-0 font-weight-bold text-primary">Historico de Valores</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Oscilação de Mercado</h6>
                         
                         <div class="dropdown no-arrow">
-                            {{dados|safe}}
+                            {{relatorio|safe}}
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
+
         <div class="row ml-5 mr-5 p-3">
             <!-- Gráfico -->
             <div class="col-12">
@@ -103,10 +104,10 @@
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 mb-2 d-flex flex-row align-items-center justify-content-between">
                         
-                        <h6 class="m-0 font-weight-bold text-primary">Oscilação de Mercado</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Historico de Valores</h6>
                         
                         <div class="dropdown no-arrow">
-                            {{relatorio|safe}}
+                            {{dados|safe}}
                         </div>
                     </div>
 
@@ -152,37 +153,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Valores Card Example -->
-            <div class="col-lg-6 col-sm-12 h-100 py-2 mb-2">
-                <div class="card-body card border-left-success shadow">
-                    <div class="row no-gutters align-items-center">
-                        <div class="mr-2">
-                            <div class="font-weight-bold text-success text-uppercase mb-1">
-                                Valorização Mensal
-                            </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                <p>As carteiras valorizaram x,x% no último mês</p>
-
-                                <button type="button" class="btn btn-link" href="#">Ver histórico</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-sm-12 h-100 py-2 mb-2">
-                <div class="card-body card border-left-success shadow">
-                    <div class="row no-gutters align-items-center">
-                        <div class="mr-2">
-                            <p class="font-weight-bold text-success text-uppercase mb-1">Perdas</p>
-                            <p class="h5 mb-0 w-75 font-weight-bold text-gray-800">As maiores perdas estão concentradas nas ações X Y Z das carteiras 1 2 3</p>
-                            <button type="button" class="btn btn-link mt-0" href="#">Ver histórico</button>
-                        </div>
-                    </div>
-                </div>
-            </div>               
+            </div>           
         </div>
          
 

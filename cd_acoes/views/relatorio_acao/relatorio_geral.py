@@ -17,7 +17,7 @@ def relatorio_geral(request):
     nome_da_acao = "LMT"
     # nome_da_acao = "^BVSP"
 
-    menssagem = "Relatório Geral: " + nome_da_acao
+    menssagem = "Relatório Geral: "
     
     acao = yf.Ticker(nome_da_acao)
 

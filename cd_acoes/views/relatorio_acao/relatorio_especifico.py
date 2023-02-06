@@ -17,11 +17,11 @@ def relatorio_especifico(request):
     nome_da_acao = "LMT"
     nome_da_acao = "^BVSP"
 
-    menssagem = "Relatório Geral: " + nome_da_acao
+    menssagem = "Relatório da Ação: " + nome_da_acao
     
     acao = yf.Ticker(nome_da_acao)
 
-    dados1 = acao.history(period="1mo")
+    dados1 = acao.history(period="6mo")
     dados1 = dados1.sort_values('Date')
     Close = dados1['Close']
     Open = dados1['Open']
@@ -43,26 +43,20 @@ def relatorio_especifico(request):
     figura.add_scatter(
         x=Close.index,
         y=Close,
-        name='Fechamento'
+        name='Valor vendido'
         )
 
     figura.add_scatter(
         x=Open.index,
         y=Open,
-        name='Abertura'
-        )
-
-    figura.add_box(
-        x=High.index,
-        y=High,
-        name='Maior valor'
+        name='Valor comprado'
         )
 
     figura.update_layout(
-        title_text='Valor da ação por semana.',
+        title_text='Valor da ação nos ultimos meses.',
         height=400,
-        xaxis_title="Ano",
-        yaxis_title="valor em Moeda em USD",
+        xaxis_title="Período de tempo",
+        yaxis_title="Preço (Moeda em USD)",
         legend_title="Legenda",
         font=dict(
             family="Arial",

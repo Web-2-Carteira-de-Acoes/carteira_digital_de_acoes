@@ -95,8 +95,8 @@ def dashboard(request):
     relatorio_de_lucros.update_layout(
         title_text='Lucros nos ultimos 4 meses',
         height=400,
-        xaxis_title="Ano",
-        yaxis_title="Valor médio por mês.",
+        xaxis_title="mês",
+        yaxis_title="Preço médio por mês.",
         legend_title="Legenda",
         font=dict(
             family="Arial",
