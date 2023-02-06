@@ -4,9 +4,10 @@ from django.shortcuts import render
 import plotly.graph_objects as go
 import yfinance as yf
 
+
 def index(request):
     # return render(request, 'indexTest.html')
-    
+
     return TemplateView.as_view(template_name="index.html")
 
 
@@ -14,13 +15,17 @@ def relatorio_geral(request):
     # return render(request, 'indexTest.html')
 
     nome_da_acao = "LMT"
-    
-    menssagem = "Relatório Geral"+ nome_da_acao
+    nome_da_acao = "^BVSP"
 
+    menssagem = "Relatório Geral: " + nome_da_acao
+    
     acao = yf.Ticker(nome_da_acao)
 
-    dados1 = acao.history(period="6mo")
-    dados1 = dados1['Close']
+    dados1 = acao.history(period="1mo")
+    dados1 = dados1.sort_values('Date')
+    Close = dados1['Close']
+    Open = dados1['Open']
+    High = dados1['High']
     # dados1.columns = ['Coluna_1', 'Coluna_2']
     # dados1.drop(2)
     print(dados1)
@@ -36,15 +41,28 @@ def relatorio_geral(request):
     #     name='num de inscritos')
 
     figura.add_scatter(
-        x=dados1.index,
-        y=dados1,
-        name='num de inscritos')
+        x=Close.index,
+        y=Close,
+        name='Fechamento'
+        )
+
+    figura.add_scatter(
+        x=Open.index,
+        y=Open,
+        name='Abertura'
+        )
+
+    figura.add_box(
+        x=High.index,
+        y=High,
+        name='Maior valor'
+        )
 
     figura.update_layout(
-        title_text='Valor da ação por ano.',
+        title_text='Valor da ação por semana.',
         height=400,
         xaxis_title="Ano",
-        yaxis_title="valor em real",
+        yaxis_title="valor em Moeda em USD",
         legend_title="Legenda",
         font=dict(
             family="Arial",
@@ -54,10 +72,10 @@ def relatorio_geral(request):
     )
 
     relatorio = figura.to_html()
-    # dados = dados1.to_html()
+    dados = dados1.to_html()
 
     context = {
-        # 'dados': dados,
+        'dados': dados,
         'menssagem': menssagem,
         'relatorio': relatorio
     }
