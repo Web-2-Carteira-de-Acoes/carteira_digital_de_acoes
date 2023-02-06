@@ -11,24 +11,27 @@
 <link href={% static "css/styles_layout.css" %} rel="stylesheet">
 
 
-
+<div class="d-sm-flex align-items-center  mb-2">
+    <h1 class="h3 mb-3 text-gray-800">Crie uma nova carteira:</h1>
+    <p class="mt-3" style="background: white; width: 200px; margin-left: 500px; text-align: center; "><p>
+        <p class="col-3" id="textBotaoPrimCart" style=" color: #000000; margin-left: -40em; "  > 
+           
+                <a class="btn btn-outline btn-custom " style=" margin-right: 90px; border-radius: 100px;" role="button" href="{% url 'create_carteira'%}">
+                <svg class="bi bi-plus-circle container d-flex" fill="#05FF00" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="text-shadow: 6px 7px 5px #6565658f; ">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+                </a>
+                </p>
+                
+</div>
 <div class="mb-2">   
-    <p class="mt-3" style="background: white; width: 250px; margin-left: 50px; text-align: center; "> ADICIONAR NOVA CARTEIRA<p>
-    <p class="col-2" id="textBotaoPrimCart" style=" color: #000000; margin-left: 2em; "  > 
-       
-            <a class="btn btn-outline btn-custom " style=" margin-right: 70px; border-radius: 50px;" role="button" href="{% url 'create_carteira'%}">
-            <svg class="bi bi-plus-circle container d-flex" fill="#05FF00" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style="text-shadow: 6px 7px 5px #6565658f; ">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-            </svg>
-        </a>
-    </p>
     
+       
 
     {% for carteirinha in carteira %}
     
-    <form action="{% url 'delete_carteira' carteirinha.id %}" method="post">
-        {% csrf_token %}
+   
    
     <div class="container-fluid ">
     
@@ -48,7 +51,18 @@
                                     <p class="mb-2" style="color: #000000; margin-right: 5em;margin-left:100px;"> {{carteirinha.nome}}</p>
     
                               
-
+            
+            <form action="{% url 'list_acoes_carteira'  %}" method="post">
+                {% csrf_token %}
+    
+            <div class="mb-2 ml-2 mr-2">
+                <input  type="hidden" value="{{user.id}}" name="usuario_id" id="usuario_id" >
+                <input  type="hidden" value="{{carteirinha.id}}" name="carteiraID" id="carteiraID" >
+                
+                <input type="submit" value="Ver Carteira" name="verAcoes">
+            </div>
+    
+                </form>
 
         <form action="{% url 'delete_carteira' carteirinha.id %}" method="post">
             {% csrf_token %}

@@ -1,0 +1,54 @@
+
+{% extends 'layout/layout.html' %}
+{%load static %}
+{% block title %}telainicial2{% endblock %}
+{% block css %}
+<link href={% static "css/styles_layout.css" %} rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+
+<link href={% static "css/styles_layout.css" %} rel="stylesheet">
+
+
+<div class="d-sm-flex align-items-center  mb-2">
+    <h1 class="h3 mb-3 text-gray-800">Ações desta carteira:</h1>
+   
+                
+</div>
+<div class="mb-2">   
+    
+       
+{{acao}}
+    {% for acao in dados %}
+    
+   
+   
+    <div class="container-fluid ">
+    
+        <div class="container py-5 h-20 ">
+            <div class="d-flex justify-content-center align-items-center mb-lg-n5 mt-auto">
+                <div class="col-12">
+                    <div class=" card card-body-custom " >
+                        <div class="card-body p-1 ps-2 pe-3 text-center" style="height: fit-content; width: 100%; background-color: rgba(37, 37, 37, 0.08);" >    
+                            <div class="row mt-2 ">
+                                <label class="  col-sm-10 col-md-6 " for="acao1">Nome: {{acao.acao}}</label>
+                                <label class="  col-sm-10 col-md-6 " for="acao1">Quantidade Comprada: {{acao.quantidade_atual}}</label>
+                            </div>
+                            <div class="row mt-2">
+                                <label class="  col-sm-10 col-md-6 " for="acao1">Preco Pago: R$ {{acao.precoPago}}</label>
+                                <label class="  col-sm-10 col-md-6 " for="acao1">Data da compra: {{acao.dataCompra}}</label>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endfor %}
+</div>
+
+
+
+{% endblock %}
