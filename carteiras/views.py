@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Carteira
 from .forms import CarteiraForm
 from carteira_acoes.forms import Carteira_AcoesForm
+from carteira_acoes.models import Carteira_Acoes
 from acoes.models import Acoes
 from acoes.acoes import acoesFiltro
 from acoes.views import find_or_create_acao
@@ -116,3 +117,9 @@ def delete_carteira(request,id):
     return render(request, '../templates/layout/carteiras/listar_carteiras.html', {'carteira': carteiras})
 
  
+def list_acoes_carteira(request):
+    
+    dados = Carteira_Acoes.objects.filter(carteira=request.POST.get('carteiraID'))
+    
+    return render(request, '../templates/layout/carteiras/listar_acoes_carteira.html', {'dados':dados})
+    
