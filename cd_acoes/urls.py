@@ -22,8 +22,8 @@ from .views.relatorio_acao import relatorio_especifico, relatorio_geral
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', view.dashboard, name='tela_dashboard'),
-    path('dashboard', TemplateView.as_view(template_name="dashboard.html"), name='dashboard'),
+    path('', view.dashboard, name='dashboard'),
+    path('dashboard', TemplateView.as_view(template_name="dashboard.html")),
     
 #ana
     path('login', TemplateView.as_view(template_name="layout/formularios/login.html")),
