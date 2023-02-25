@@ -40,7 +40,7 @@ def home(request):
             user.save()
             data['msg'] = 'usuario cadastrado'
             data['class'] = 'alert alert-success'
-            return render(request,'../templates/layout/formularios/cadastro.html',data)
+            return render(request,'../templates/layout/formularios/login.html',data)
     else:
         return render(request, template_name, data)
 
@@ -52,7 +52,7 @@ def user_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('../dashboard')
+            return redirect('dashboard')
         else:
             data = {}
             data['msg'] = 'digite uma usuario valido'

@@ -8,27 +8,42 @@
 {% block content %}
 <!-- Begin Page Content -->
 <div class="container-fluid">
-
-    <form action="{% url 'add_acoes_carteira'%}" method="post" class="p-0 m-0 mt-lg-3">
+ <form action="{% url 'add_acoes_carteira'%}" method="post" class="p-0 m-0 mt-lg-3">
         {% csrf_token %}
 
     <div class="overflow-hiden m-5">
         <div class="row justify-content-around">
 
-            <input class="form-check-input me-1 mb-2 col-sm-1 col-md-1 col-lg-1 col-xl-1 order-first" type="text" name="buscaAcao">
-     
 
+     
             <div class="col-lg-3 col-md-6 col-sm-6" 
             style="width: fit-content;">
                 <button class="btn btn-outline-info btn-lg mt-sm-2 m-md-3 m-lg-0 mt-lg-1 mb-2 p-lg-2" type="submit">Buscar ações</button>
             </div>
 
+     
+            <input class="form-check-input me-1 mb-2 col-sm-1 col-md-1 col-lg-1 col-xl-1 order-first" type="text" name="buscaAcao">
+
+
+   
+
+     
         </form>
 
         <form action="{% url 'add_acoes_carteira'%}" method="post" class="p-0 m-0 mt-lg-3">
+
             {% csrf_token %}
 
             <div class="col-lg-3 col-md-6 col-sm-6 mt-sm-3 mt-md-4 mt-lg-2">
+
+
+
+
+    
+
+
+
+
                 <div class="p-lg-2">
                     <a href="#" class="btn-link text-lg-h2 text-md-h3 text-sm-h5"> <!---->
                         Filtro
@@ -51,7 +66,7 @@
         <input  type="hidden" value="{{carteira}}" name="carteira" id="carteira">
 
         
-        <div class="d-md-flex justify-content-md-end">
+        <div class="d-md-flex justify-content-md-end mb-2">
             <button type="submit" class="btn btn-success mt-3">Salvar</button>
         </div>
         <input  type="hidden" value="{{user.id}}" name="usuario_id" id="usuario_id">
